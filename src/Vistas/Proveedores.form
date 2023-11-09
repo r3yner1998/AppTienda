@@ -230,6 +230,9 @@
             <Property name="text" type="java.lang.String" value="..."/>
             <Property name="toolTipText" type="java.lang.String" value="Buscar proveedor"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnBuscarActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JToggleButton" name="btnGrabar">
           <Properties>
@@ -239,6 +242,9 @@
             <Property name="text" type="java.lang.String" value="Grabar"/>
             <Property name="toolTipText" type="java.lang.String" value="Grabar"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnGrabarActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel8">
           <Properties>

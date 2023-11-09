@@ -6,6 +6,11 @@ package Vistas;
 
 import java.awt.event.KeyEvent;
 import javax.swing.JTextField;
+import conexion.conexion;
+import DAO.controlProveedores;
+import modelo.Proveedor;
+import java.sql.*;
+import java.util.List;
 
 /**
  *
@@ -19,6 +24,7 @@ public class Proveedores extends javax.swing.JFrame {
     public Proveedores() {
         initComponents();
         this.setLocationRelativeTo(null);
+        Proveedor pro = new Proveedor();
     }
     
     public static void validarDecimal(KeyEvent evt, JTextField textField) {
@@ -98,10 +104,20 @@ public class Proveedores extends javax.swing.JFrame {
         btnBuscar.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         btnBuscar.setText("...");
         btnBuscar.setToolTipText("Buscar proveedor");
+        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarActionPerformed(evt);
+            }
+        });
 
         btnGrabar.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
         btnGrabar.setText("Grabar");
         btnGrabar.setToolTipText("Grabar");
+        btnGrabar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGrabarActionPerformed(evt);
+            }
+        });
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
         jLabel8.setText("Teléfono:");
@@ -205,6 +221,15 @@ public class Proveedores extends javax.swing.JFrame {
     private void txtDocKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtDocKeyTyped
         validarDecimal(evt, txtDoc);
     }//GEN-LAST:event_txtDocKeyTyped
+
+    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
+        BuscarProveedor verProveedor=new BuscarProveedor();
+        verProveedor.setVisible(true);
+    }//GEN-LAST:event_btnBuscarActionPerformed
+
+    private void btnGrabarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGrabarActionPerformed
+        
+    }//GEN-LAST:event_btnGrabarActionPerformed
 
     /**
      * @param args the command line arguments

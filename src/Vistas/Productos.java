@@ -104,6 +104,11 @@ public class Productos extends javax.swing.JFrame {
         btnBuscar.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
         btnBuscar.setText("...");
         btnBuscar.setToolTipText("Buscar cliente");
+        btnBuscar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBuscarActionPerformed(evt);
+            }
+        });
 
         btnGrabar.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
         btnGrabar.setText("Grabar");
@@ -226,6 +231,11 @@ public class Productos extends javax.swing.JFrame {
     private void txtPrecioKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txtPrecioKeyTyped
         validarDecimal(evt, txtPrecio);
     }//GEN-LAST:event_txtPrecioKeyTyped
+
+    private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
+        BuscarProducto verProducto= new BuscarProducto();
+        verProducto.setVisible(true);
+    }//GEN-LAST:event_btnBuscarActionPerformed
 
     /**
      * @param args the command line arguments
