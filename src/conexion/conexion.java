@@ -23,7 +23,7 @@ public class conexion {
     }
     public void conectar()throws Exception{
         try {
-            Class.forName("com.mysql.cj.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             con = DriverManager.getConnection
             ("jdbc:mysql://localhost:3306/tombodb","root","");
         } catch (Exception e) {
